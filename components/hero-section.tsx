@@ -9,7 +9,8 @@ export function HeroSection() {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-32">
       <div className="absolute top-0 left-0 right-0 h-[60vh] bg-gradient-to-b from-primary/5 to-transparent dark:from-primary/10 -z-10" />
-      
+
+      {/* Background dots */}
       <motion.div
         className="absolute inset-0 -z-10"
         initial={{ opacity: 0 }}
@@ -38,6 +39,7 @@ export function HeroSection() {
         ))}
       </motion.div>
 
+      {/* Text content */}
       <div className="container mx-auto flex flex-col items-center text-center">
         <motion.h1
           className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
@@ -51,22 +53,23 @@ export function HeroSection() {
           </span>
         </motion.h1>
 
-        <motion.div
-          className="text-xl md:text-2xl text-muted-foreground mb-8"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          <span className="mr-2">I'm a</span>
-          <AnimatedText
-            text={[
-              "Full-Stack Developer",
-              "UI/UX Enthusiast",
-              "Problem Solver",
-            ]}
-            className="font-semibold inline-block h-auto"
-          />
-        </motion.div>
+          <motion.div
+  className="text-xl md:text-2xl text-muted-foreground mb-8 flex items-center h-10"
+  initial={{ opacity: 0, y: 50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: 0.1 }}
+>
+  <span className="mr-2">I'm a</span>
+  <AnimatedText
+    text={[
+      "Full-Stack Developer",
+      "UI/UX Enthusiast",
+      "Problem Solver",
+    ]}
+    className="w-[220px]" // ensures enough space for longest text
+  />
+</motion.div>
+
 
         <motion.div
           className="flex gap-4 mb-12"
@@ -77,19 +80,24 @@ export function HeroSection() {
           <Button
             size="lg"
             className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
-            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() =>
+              document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+            }
           >
             Contact Me
           </Button>
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             variant="outline"
-            onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() =>
+              document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
+            }
           >
             View Projects
           </Button>
         </motion.div>
 
+        {/* Social Icons */}
         <motion.div
           className="flex gap-4"
           initial={{ opacity: 0, y: 50 }}
@@ -123,6 +131,7 @@ export function HeroSection() {
         </motion.div>
       </div>
 
+      {/* Scroll down button */}
       <motion.div
         className="absolute bottom-10"
         initial={{ opacity: 0, y: -20 }}
@@ -131,7 +140,9 @@ export function HeroSection() {
       >
         <motion.button
           className="text-muted-foreground flex flex-col items-center"
-          onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
+          onClick={() =>
+            document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })
+          }
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
         >
