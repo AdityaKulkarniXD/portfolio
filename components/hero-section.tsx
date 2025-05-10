@@ -55,7 +55,7 @@ export function HeroSection() {
 
           <motion.div
   className="text-xl md:text-2xl text-muted-foreground mb-8 flex items-center h-10"
-  initial={{ opacity: 0, y: 50 }}
+  initial={{ opacity: 0, y:50 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.5, delay: 0.1 }}
 >
@@ -66,7 +66,7 @@ export function HeroSection() {
       "UI/UX Enthusiast",
       "Problem Solver",
     ]}
-    className="w-[220px]" // ensures enough space for longest text
+    className="w-[300px]" // ensures enough space for longest text
   />
 </motion.div>
 

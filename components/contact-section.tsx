@@ -72,19 +72,19 @@ export function ContactSection() {
     {
       icon: <MapPin className="h-5 w-5" />,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Hyderabad, India",
     },
     {
       icon: <Mail className="h-5 w-5" />,
       label: "Email",
-      value: "hello@example.com",
-      link: "mailto:hello@example.com",
+      value: "aditya.kulkarnixd@gmail.com",
+      link: "mailto:aditya.kulkarnixd@gmail.com",
     },
     {
       icon: <Phone className="h-5 w-5" />,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      value: "+91-7702722422",
+      link: "tel:+917702722422",
     },
   ];
 
@@ -92,17 +92,17 @@ export function ContactSection() {
     {
       icon: <Github className="h-5 w-5" />,
       label: "GitHub",
-      link: "https://github.com",
+      link: "https://github.com/AdityaKulkarniXD",
     },
     {
       icon: <Linkedin className="h-5 w-5" />,
       label: "LinkedIn",
-      link: "https://linkedin.com",
+      link: "https://linkedin.com/in/aditya-kulkarnixd/"
     },
     {
       icon: <Twitter className="h-5 w-5" />,
       label: "Twitter",
-      link: "https://twitter.com",
+      link: "https://x.com/BeastWolfXD",
     },
   ];
 

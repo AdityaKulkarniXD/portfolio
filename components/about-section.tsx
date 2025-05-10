@@ -9,13 +9,13 @@ import { Download, Clock, Briefcase, GraduationCap } from "lucide-react";
 
 const experienceItems: TimelineItem[] = [
   {
-    year: "2022 - Present",
-    title: "Senior Frontend Developer",
-    description: "Leading frontend development for enterprise clients, focusing on performance optimization and user experience.",
+    year: "2024 - Present",
+    title: "Research Intern",
+    description: "Research on Improving Rag Accuracy.",
     tags: ["React", "Next.js", "TypeScript"]
   },
   {
-    year: "2020 - 2022",
+    year: "2022 - 2026",
     title: "Full Stack Developer",
     description: "Built full-stack applications with modern JavaScript technologies and cloud infrastructure.",
     tags: ["Node.js", "React", "AWS"]
@@ -30,17 +30,12 @@ const experienceItems: TimelineItem[] = [
 
 const educationItems: TimelineItem[] = [
   {
-    year: "2016 - 2018",
-    title: "Master's in Computer Science",
+    year: "2022 - 2026",
+    title: "Bachelors's in Computer Science",
     description: "Focused on human-computer interaction and artificial intelligence.",
-    tags: ["University of Technology"]
+    tags: ["Anurag University"]
   },
-  {
-    year: "2012 - 2016",
-    title: "Bachelor's in Software Engineering",
-    description: "Graduated with honors. Specialized in web technologies and databases.",
-    tags: ["State University"]
-  }
+
 ];
 
 export function AboutSection() {
