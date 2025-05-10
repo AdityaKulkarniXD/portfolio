@@ -1,0 +1,96 @@
+{
+  "name": "Aditya Kulkarni",
+  "title": "Full-Stack Developer",
+  "location": "Hyderabad, Telangana",
+  "email": "aditya.kulkarnixd@gmail.com",
+  "phone": "+91-7702722422",
+  "socialLinks": {
+    "linkedin": "https://www.linkedin.com/in/aditya-kulkarnixd/",
+    "github": "https://github.com/AdityaKulkarniXD"
+  },
+  "summary": "I am passionate about creating and facilitating hackathons that inspire and empower students and developers to solve real-world problems with technology. My experience at Anurag Hackorio has honed my skills in event coordination and leadership. With a Bachelor of Technology degree in Computer Science from Anurag Group of Institutions, I am proficient in various programming languages and technologies. Eager to apply my knowledge and skills in a professional setting, I am seeking an internship opportunity where I can contribute to innovative projects and further develop my expertise.",
+  "skills": {
+    "languages": ["Go", "C", "Python", "Java", "HTML", "CSS", "TypeScript"],
+    "technologies": ["Flutter", "Streamlit", "MERN Stack"],
+    "other": [
+      "Data Structures and Algorithm",
+      "SQL",
+      "Linux",
+      "Problem Solving",
+      "MS Office",
+      "Communication Skills"
+    ]
+  },
+  "projects": [
+    {
+      "title": "Career Guidance",
+      "description": "We developed a website that provides career and educational data, skill and aptitude tests, and a chatbot, implemented via APIs and integrated with Streamlit, to track student progress and guide their career paths.",
+      "tags": ["Streamlit", "Python", "APIs"]
+    },
+    {
+      "title": "HealthConnect Emergency Locator System",
+      "description": "I built a website that locates healthcare centers and automatically sends patient details and location to nearby hospitals during emergencies, using Geocoding, Geolocation, Places APIs, and Twilio for automated calls.",
+      "tags": ["JavaScript", "APIs", "Twilio"]
+    },
+    {
+      "title": "Ainexa Jobs",
+      "description": "I built a LinkedIn-like website that automatically sends resumes and documents to companies of interest or suggests companies where users have higher chances of securing a job.",
+      "tags": ["React", "Node.js", "MongoDB"]
+    }
+  ],
+  "education": [
+    {
+      "school": "Anurag University",
+      "location": "Hyderabad",
+      "degree": "B.Tech Computer Science and Engineering",
+      "period": "August 2022-Present",
+      "gpa": "9.23 (III-I)"
+    },
+    {
+      "school": "Vijaya Ratna Junior College",
+      "location": "Hyderabad",
+      "degree": "Junior College",
+      "period": "June 2019- March 2021",
+      "percentage": "91.8%"
+    },
+    {
+      "school": "St. Paul's High School",
+      "location": "Hyderabad",
+      "degree": "High School",
+      "period": "June 2006 - March 2019",
+      "percentage": "90.0%",
+      "activities": ["Debate Club", "Quiz Club", "Cultural Club", "IT Club"]
+    }
+  ],
+  "experience": [
+    {
+      "title": "Research Intern",
+      "period": "December 2024- Present",
+      "description": "Conducted research on Retrieval-Augmented Generation (RAG), focusing on improving the accuracy and efficiency of RAG pipelines through advanced retrieval strategies and model fine-tuning. Worked under the guidance of college professors, contributing to data preprocessing, model training, and performance evaluation."
+    }
+  ],
+  "achievements": [
+    "Secured 1st place in TechXcelerate conducted by CodeBeat in Anurag Univeristy and won a cash prize of Rs. 25,000/-",
+    "Secured 3rd place in TechXcelerate conducted by CodeBeat in BITS Pilani GOA Campus and won a cash prize of Rs. 20,000/-",
+    "Secured 1st place in HackXcelerate conducted by Microsoft and ByteXL at CBIT and won a cash prize of Rs.1,50,000/-",
+    "Secured 2nd place in Ideathon conducted by IIT Hyderabad and won a cash prize of Rs.7000/-",
+    "Secured 1st place in Sudhee 2024 Hackathon Conducted by CBIT.",
+    "Secured 2nd place in Spark Ideathon-2023 Conducted by Anurag University.",
+    "Secured 3rd place in Incude Innovation Sprint and received a cash prize of Rs. 1000/-",
+    "Placed top 10 in Smart Hacks conducted by Coding Cubs in Anurag University."
+  ],
+  "certifications": [
+    "Python for Beginners from Infosys Springboard.",
+    "Introduction to Machine Learning from Infosys Springboard",
+    "Introduction to Cyber Security from Infosys Springboard",
+    "Data Structures and Algorithm from Intellipath.",
+    "Data Structures and Algorithm from Infosys Springboard"
+  ],
+  "interests": [
+    "Solving Escape Rooms",
+    "Football",
+    "Basketball",
+    "Participating in Hackathons and Coding Competitions",
+    "Video Games"
+  ]
+}
