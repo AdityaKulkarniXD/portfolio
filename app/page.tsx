@@ -131,6 +131,35 @@ const experience = [
   }
 ];
 
+const education = [
+  {
+    degree: 'B.Tech Computer Science and Engineering',
+    school: 'Anurag University',
+    period: 'August 2022 - Present',
+    location: 'Hyderabad',
+    gpa: '9.23 (III-I)',
+    description: 'Currently pursuing Bachelor of Technology in Computer Science and Engineering with focus on software development and research.',
+    current: true
+  },
+  {
+    degree: 'Junior College',
+    school: 'Vijaya Ratna Junior College',
+    period: 'June 2019 - March 2021',
+    location: 'Hyderabad',
+    percentage: '91.8%',
+    description: 'Completed intermediate education with excellent academic performance in science stream.'
+  },
+  {
+    degree: 'High School',
+    school: 'St. Paul\'s High School',
+    period: 'June 2006 - March 2019',
+    location: 'Hyderabad',
+    percentage: '90.0%',
+    description: 'Completed secondary education with active participation in various clubs and activities.',
+    activities: ['Debate Club', 'Quiz Club', 'Cultural Club', 'IT Club']
+  }
+];
+
 const contactInfo = [
   {
     icon: Mail,
@@ -616,7 +645,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Experience Section */}
+      {/* Experience & Education Section */}
       <section id="about" className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <motion.div
@@ -695,28 +724,54 @@ export default function Home() {
                   Education
                 </div>
                 <div className="space-y-6">
-                  <div className="border-l-4 border-purple-500 pl-6 pb-6 relative">
-                    <div className="absolute -left-2 top-0 w-4 h-4 bg-purple-500 rounded-full animate-pulse" />
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                      <h3 className="font-semibold text-lg">B.Tech Computer Science</h3>
-                      <div className="flex items-center text-sm text-muted-foreground">
-                        <Calendar className="h-4 w-4 mr-1" />
-                        2022 - Present
+                  {education.map((edu, index) => (
+                    <div key={index} className="border-l-4 border-purple-500 pl-6 pb-6 last:pb-0 relative">
+                      {edu.current && (
+                        <div className="absolute -left-2 top-0 w-4 h-4 bg-purple-500 rounded-full animate-pulse" />
+                      )}
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                        <h3 className="font-semibold text-lg">{edu.degree}</h3>
+                        <div className="flex items-center text-sm text-muted-foreground">
+                          <Calendar className="h-4 w-4 mr-1" />
+                          {edu.period}
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex items-center text-sm text-muted-foreground mb-2">
-                      <span className="font-medium text-primary">Anurag University</span>
-                      <span className="mx-2">•</span>
-                      <MapPin className="h-4 w-4 mr-1" />
-                      Hyderabad
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <div className="badge-smooth bg-gradient-to-r from-purple-500 to-pink-500 text-white">
-                        CGPA: 9.23
+                      <div className="flex items-center text-sm text-muted-foreground mb-2">
+                        <span className="font-medium text-primary">{edu.school}</span>
+                        <span className="mx-2">•</span>
+                        <MapPin className="h-4 w-4 mr-1" />
+                        {edu.location}
                       </div>
-                      <div className="badge-smooth">Current</div>
+                      <p className="text-sm text-muted-foreground mb-3">{edu.description}</p>
+                      <div className="flex flex-wrap items-center gap-2">
+                        {edu.gpa && (
+                          <div className="badge-smooth bg-gradient-to-r from-purple-500 to-pink-500 text-white">
+                            CGPA: {edu.gpa}
+                          </div>
+                        )}
+                        {edu.percentage && (
+                          <div className="badge-smooth bg-gradient-to-r from-purple-500 to-pink-500 text-white">
+                            {edu.percentage}
+                          </div>
+                        )}
+                        {edu.current && (
+                          <div className="badge-smooth">Current</div>
+                        )}
+                      </div>
+                      {edu.activities && (
+                        <div className="mt-3">
+                          <p className="text-xs text-muted-foreground mb-2">Activities:</p>
+                          <div className="flex flex-wrap gap-1">
+                            {edu.activities.map((activity, i) => (
+                              <span key={i} className="text-xs bg-muted px-2 py-1 rounded">
+                                {activity}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </motion.div>
