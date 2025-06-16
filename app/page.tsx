@@ -40,6 +40,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
 import { TechIcon } from '@/components/tech-icon';
+import { ProfilePictureUpload } from '@/components/profile-picture-upload';
+import { useProfilePicture } from '@/hooks/use-profile-picture';
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -222,6 +224,7 @@ export default function Home() {
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 300], [0, 50]);
   const y2 = useTransform(scrollY, [0, 300], [0, -50]);
+  const { profileImage, updateProfileImage } = useProfilePicture();
 
   const {
     register,
@@ -300,12 +303,13 @@ export default function Home() {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="relative mx-auto w-32 h-32 mb-8"
+                className="relative mx-auto mb-8 flex justify-center"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full animate-pulse" />
-                <div className="absolute inset-2 bg-white dark:bg-gray-900 rounded-full flex items-center justify-center">
-                  <User className="w-16 h-16 text-blue-500" />
-                </div>
+                <ProfilePictureUpload
+                  currentImage={profileImage}
+                  onImageChange={updateProfileImage}
+                  className="w-32 h-32"
+                />
               </motion.div>
 
               <div className="relative">
