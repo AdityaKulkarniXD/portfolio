@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: ProjectPageProps) {
   }
 
   return {
-    title: `${project.title} - Alex Johnson`,
+    title: `${project.title} - Aditya Kulkarni`,
     description: project.description,
     openGraph: {
       title: project.title,

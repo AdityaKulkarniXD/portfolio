@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "Collaborative Task Management App"
 description: "A real-time collaborative task management application with team workspaces, built using React, Node.js, and Socket.io."
 date: "2023-11-20"
@@ -195,4 +195,4 @@ The application has been successfully adopted by teams of various sizes:
 - **Enterprise features**: SSO, advanced security, and compliance tools
 - **Marketplace**: Third-party integrations and custom plugins
 
-This project demonstrates expertise in building scalable, real-time applications that solve genuine business problems while maintaining high code quality and user experience standards.
+This project demonstrates expertise in building scalable, real-time applications that solve genuine business problems while maintaining high code quality and user experience standards. -->

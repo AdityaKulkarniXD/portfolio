@@ -17,7 +17,7 @@ import { QuoteIcon } from "lucide-react";
 const testimonials: Testimonial[] = [
   {
     id: "1",
-    name: "Alex Johnson",
+    name: "Aditya Kulkarni",
     role: "CEO",
     company: "TechVision",
     content: "John's work on our web application was outstanding. He delivered a product that exceeded our expectations and has significantly improved our user engagement.",

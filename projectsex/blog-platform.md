@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "Modern Blog Platform"
 description: "A full-featured blogging platform with markdown support, user authentication, comments system, and SEO optimization built with Next.js."
 date: "2023-05-15"
@@ -331,4 +331,4 @@ The platform achieves excellent performance:
 - **Multilingual Support**: Content translation and localization
 - **White-label Solution**: Customizable platform for organizations
 
-This project showcases the ability to build complex content management systems while maintaining focus on user experience, performance, and scalability. The platform successfully balances the needs of content creators, readers, and community managers in a cohesive, well-designed application.
+This project showcases the ability to build complex content management systems while maintaining focus on user experience, performance, and scalability. The platform successfully balances the needs of content creators, readers, and community managers in a cohesive, well-designed application. -->

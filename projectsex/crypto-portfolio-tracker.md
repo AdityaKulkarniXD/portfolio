@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "Cryptocurrency Portfolio Tracker"
 description: "A comprehensive crypto portfolio management app with real-time price tracking, profit/loss analysis, and market insights built with React and crypto APIs."
 date: "2023-03-20"
@@ -331,4 +331,4 @@ The application delivers excellent performance:
 - **Cross-Chain Analytics**: Multi-blockchain portfolio tracking
 - **Regulatory Compliance**: Enhanced compliance tools for different jurisdictions
 
-This project demonstrates expertise in building complex financial applications that handle real-time data, provide advanced analytics, and maintain the highest standards of security and user experience in the cryptocurrency space.
+This project demonstrates expertise in building complex financial applications that handle real-time data, provide advanced analytics, and maintain the highest standards of security and user experience in the cryptocurrency space. -->

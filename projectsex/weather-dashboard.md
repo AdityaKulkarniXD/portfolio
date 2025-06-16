@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "Real-time Weather Dashboard"
 description: "A comprehensive weather dashboard with interactive maps, detailed forecasts, and weather alerts built with React and multiple weather APIs."
 date: "2023-07-05"
@@ -248,4 +248,4 @@ The application promotes environmental awareness:
 - **Renewable Energy**: Solar and wind energy potential information
 - **Eco-friendly Tips**: Weather-based suggestions for reducing environmental impact
 
-This project demonstrates the ability to work with multiple APIs, handle complex data visualization, and create user-friendly interfaces for technical information while maintaining high performance and reliability standards.
+This project demonstrates the ability to work with multiple APIs, handle complex data visualization, and create user-friendly interfaces for technical information while maintaining high performance and reliability standards. -->

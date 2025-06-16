@@ -8,24 +8,24 @@ import { Toaster } from '@/components/ui/sonner';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Alex Johnson - Full Stack Developer',
+  title: 'Aditya Kulkarni - Full Stack Developer',
   description: 'Full Stack Developer specializing in React, Next.js, and Node.js. Building modern web applications with clean code and exceptional user experiences.',
   keywords: ['Full Stack Developer', 'React', 'Next.js', 'Node.js', 'JavaScript', 'TypeScript'],
-  authors: [{ name: 'Alex Johnson' }],
-  creator: 'Alex Johnson',
+  authors: [{ name: 'Aditya Kulkarni' }],
+  creator: 'Aditya Kulkarni',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://alexjohnson.dev',
-    title: 'Alex Johnson - Full Stack Developer',
+    url: 'https://adityakulkarni.dev',
+    title: 'Aditya Kulkarni - Full Stack Developer',
     description: 'Full Stack Developer specializing in React, Next.js, and Node.js. Building modern web applications with clean code and exceptional user experiences.',
-    siteName: 'Alex Johnson Portfolio',
+    siteName: 'Aditya Kulkarni Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alex Johnson - Full Stack Developer',
+    title: 'Aditya Kulkarni - Full Stack Developer',
     description: 'Full Stack Developer specializing in React, Next.js, and Node.js. Building modern web applications with clean code and exceptional user experiences.',
-    creator: '@alexjohnson',
+    creator: '@adityakulkarni',
   },
   viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',

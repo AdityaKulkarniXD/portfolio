@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "Modern E-commerce Platform"
 description: "A full-stack e-commerce platform built with Next.js, featuring real-time inventory, payment processing, and admin dashboard."
 date: "2024-01-15"
@@ -116,4 +116,4 @@ The platform successfully handles:
 - **Advanced Analytics**: More detailed reporting and insights
 - **International Support**: Multi-currency and multi-language support
 
-This project showcases the ability to build production-ready applications that scale and provide excellent user experiences while maintaining clean, maintainable code.
+This project showcases the ability to build production-ready applications that scale and provide excellent user experiences while maintaining clean, maintainable code. -->

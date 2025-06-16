@@ -33,7 +33,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'; 
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -125,6 +125,22 @@ const experience = [
       'Improving accuracy and efficiency of RAG pipelines',
       'Working on advanced retrieval strategies and model fine-tuning',
       'Contributing to data preprocessing and performance evaluation'
+    ],
+    icon: GraduationCap,
+    current: true
+  },
+   {
+    title: 'Research Intern',
+    company: 'DRDO, India',
+    period: 'May 2025 - Present',
+    location: 'Hyderabad, India',
+    description: [
+      'Working on pattern recognition for defense-related data analysis',
+      'Studying AI applications in surveillance and decision-making systems',
+      'Exploring machine learning use cases in defense scenarios',
+      'Gaining hands-on experience with signal processing and anomaly detection',
+      'Applying AI for predictive threat analysis in national security contexts'
+      
     ],
     icon: GraduationCap,
     current: true
@@ -314,7 +330,7 @@ export default function Home() {
                   <Code className="w-6 h-6" />
                   <span>Full-Stack Developer</span>
                   <Zap className="w-6 h-6 text-yellow-500" />
-                  <span>Hackathon Champion</span>
+                  <span>Hackathon Winner</span>
                   <Heart className="w-6 h-6 text-red-500" />
                 </motion.div>
               </div>
