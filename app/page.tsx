@@ -28,7 +28,6 @@ import {
   Coffee,
   Heart
 } from 'lucide-react';
-import { Trophy } from "lucide-react"; // or wherever Trophy is defined
 
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -61,6 +60,13 @@ interface Project {
   live?: string;
   image?: string;
 }
+
+// Define Trophy component before it's used
+const Trophy = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M7 4V2C7 1.45 7.45 1 8 1H16C16.55 1 17 1.45 17 2V4H20.38C20.8 4 21.13 4.42 21.01 4.83L19.31 12.83C19.22 13.21 18.88 13.5 18.5 13.5H17.5C17.5 15.71 15.71 17.5 13.5 17.5H10.5C8.29 17.5 6.5 15.71 6.5 13.5H5.5C5.12 13.5 4.78 13.21 4.69 12.83L2.99 4.83C2.87 4.42 3.2 4 3.62 4H7ZM9 3V4H15V3H9ZM5.5 11.5H6.5C6.5 10.12 7.62 9 9 9H15C16.38 9 17.5 10.12 17.5 11.5H18.5L19.5 6H4.5L5.5 11.5ZM13 20V19H11V20C11 20.55 11.45 21 12 21S13 20.55 13 20Z"/>
+  </svg>
+);
 
 const skills = [
   { name: 'Go', icon: 'nodejs', level: 90 },
@@ -163,12 +169,6 @@ const socialLinks = [
     href: 'mailto:aditya.kulkarnixd@gmail.com',
   },
 ];
-
-const Trophy = ({ className }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M7 4V2C7 1.45 7.45 1 8 1H16C16.55 1 17 1.45 17 2V4H20.38C20.8 4 21.13 4.42 21.01 4.83L19.31 12.83C19.22 13.21 18.88 13.5 18.5 13.5H17.5C17.5 15.71 15.71 17.5 13.5 17.5H10.5C8.29 17.5 6.5 15.71 6.5 13.5H5.5C5.12 13.5 4.78 13.21 4.69 12.83L2.99 4.83C2.87 4.42 3.2 4 3.62 4H7ZM9 3V4H15V3H9ZM5.5 11.5H6.5C6.5 10.12 7.62 9 9 9H15C16.38 9 17.5 10.12 17.5 11.5H18.5L19.5 6H4.5L5.5 11.5ZM13 20V19H11V20C11 20.55 11.45 21 12 21S13 20.55 13 20Z"/>
-  </svg>
-);
 
 export default function Home() {
   const [projects, setProjects] = useState<Project[]>([]);
