@@ -309,7 +309,7 @@ export default function Home() {
             >
               <Button 
                 size="lg" 
-                className="group text-lg px-8 py-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                className="group text-lg px-8 py-6 btn-smooth"
                 onClick={() => scrollToSection('projects')}
               >
                 <Rocket className="mr-2 h-5 w-5" />
@@ -319,7 +319,7 @@ export default function Home() {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="text-lg px-8 py-6 border-2 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-blue-950 dark:hover:to-purple-950"
+                className="text-lg px-8 py-6 border-2 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-blue-950 dark:hover:to-purple-950 rounded-2xl"
                 onClick={() => scrollToSection('contact')}
               >
                 <Mail className="mr-2 h-5 w-5" />
@@ -344,7 +344,7 @@ export default function Home() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:bg-gradient-to-r hover:from-blue-100 hover:to-purple-100 dark:hover:from-blue-900 dark:hover:to-purple-900 rounded-full"
+                      className="icon-container p-4"
                     >
                       <social.icon className="h-6 w-6" />
                     </a>
@@ -368,7 +368,7 @@ export default function Home() {
           }}
           className="absolute top-20 left-10 hidden lg:block"
         >
-          <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg flex items-center justify-center shadow-lg">
+          <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center shadow-lg">
             <Code className="w-8 h-8 text-white" />
           </div>
         </motion.div>
@@ -386,7 +386,7 @@ export default function Home() {
           }}
           className="absolute bottom-20 right-10 hidden lg:block"
         >
-          <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center shadow-lg">
+          <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg">
             <Rocket className="w-8 h-8 text-white" />
           </div>
         </motion.div>
@@ -421,18 +421,16 @@ export default function Home() {
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.05, y: -5 }}
                 >
-                  <Card className="h-full bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 border-2 border-transparent hover:border-gradient-to-r hover:from-blue-400 hover:to-purple-400 transition-all duration-300">
-                    <CardContent className="p-6 text-center">
-                      <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${achievement.color} flex items-center justify-center`}>
-                        <achievement.icon className="w-8 h-8 text-white" />
-                      </div>
-                      <h3 className="font-bold text-lg mb-2">{achievement.title}</h3>
-                      <p className="text-sm text-muted-foreground mb-3">{achievement.description}</p>
-                      <Badge className={`bg-gradient-to-r ${achievement.color} text-white border-none`}>
-                        {achievement.prize}
-                      </Badge>
-                    </CardContent>
-                  </Card>
+                  <div className="achievement-card h-full p-6 text-center">
+                    <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${achievement.color} flex items-center justify-center`}>
+                      <achievement.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="font-bold text-lg mb-2">{achievement.title}</h3>
+                    <p className="text-sm text-muted-foreground mb-3">{achievement.description}</p>
+                    <div className={`badge-smooth bg-gradient-to-r ${achievement.color} text-white border-none`}>
+                      {achievement.prize}
+                    </div>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -470,7 +468,7 @@ export default function Home() {
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   className="group"
                 >
-                  <Card className="p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-white to-blue-50 dark:from-gray-900 dark:to-blue-950 border-primary/20 group-hover:border-primary/50">
+                  <div className="card-smooth p-6 text-center h-full">
                     <div className="flex flex-col items-center space-y-3">
                       <TechIcon name={skill.icon} className="w-12 h-12 group-hover:scale-110 transition-transform duration-300" />
                       <h3 className="font-semibold text-sm">{skill.name}</h3>
@@ -485,7 +483,7 @@ export default function Home() {
                       </div>
                       <span className="text-xs text-muted-foreground">{skill.level}%</span>
                     </div>
-                  </Card>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -517,18 +515,11 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[...Array(6)].map((_, i) => (
                 <div key={i} className="animate-pulse">
-                  <Card className="h-80">
-                    <CardHeader>
-                      <div className="h-6 bg-muted rounded w-3/4"></div>
-                      <div className="h-4 bg-muted rounded w-full"></div>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-3">
-                        <div className="h-4 bg-muted rounded w-full"></div>
-                        <div className="h-4 bg-muted rounded w-2/3"></div>
-                      </div>
-                    </CardContent>
-                  </Card>
+                  <div className="card-smooth h-80 p-6">
+                    <div className="h-6 bg-muted rounded w-3/4 mb-4"></div>
+                    <div className="h-4 bg-muted rounded w-full mb-2"></div>
+                    <div className="h-4 bg-muted rounded w-2/3"></div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -543,71 +534,66 @@ export default function Home() {
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.02, y: -5 }}
                 >
-                  <Card className="h-full flex flex-col hover:shadow-2xl transition-all duration-300 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 border-primary/20 group overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400/10 to-purple-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <CardHeader className="pb-4 relative z-10">
-                      <div className="flex items-start justify-between">
+                  <div className="card-smooth h-full flex flex-col p-6 group overflow-hidden">
+                    <div className="flex-1">
+                      <div className="flex items-start justify-between mb-4">
                         <div className="flex-1">
-                          <CardTitle className="text-xl mb-3 group-hover:text-primary transition-colors">
+                          <h3 className="font-bold text-xl mb-3 group-hover:text-primary transition-colors">
                             {project.title}
-                          </CardTitle>
-                          <CardDescription className="text-sm leading-relaxed">
+                          </h3>
+                          <p className="text-sm leading-relaxed text-muted-foreground">
                             {project.description}
-                          </CardDescription>
+                          </p>
                         </div>
                       </div>
-                      <div className="flex items-center text-sm text-muted-foreground mt-3">
+                      <div className="flex items-center text-sm text-muted-foreground mt-3 mb-4">
                         <Calendar className="h-4 w-4 mr-2" />
                         {new Date(project.date).toLocaleDateString('en-US', {
                           year: 'numeric',
                           month: 'long',
                         })}
                       </div>
-                    </CardHeader>
-                    <CardContent className="flex-1 pt-0 relative z-10">
-                      <div className="space-y-4">
-                        <div className="flex flex-wrap gap-2">
-                          {project.tags.slice(0, 3).map((tag) => (
-                            <Badge key={tag} variant="secondary" className="text-xs bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900">
-                              <Tag className="h-3 w-3 mr-1" />
-                              {tag}
-                            </Badge>
-                          ))}
-                          {project.tags.length > 3 && (
-                            <Badge variant="outline" className="text-xs">
-                              +{project.tags.length - 3} more
-                            </Badge>
-                          )}
-                        </div>
-                        <div className="flex gap-2 pt-2">
-                          {project.github && (
-                            <Button size="sm" variant="outline" asChild className="hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50">
-                              <a 
-                                href={project.github} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                              >
-                                <Github className="h-4 w-4 mr-1" />
-                                Code
-                              </a>
-                            </Button>
-                          )}
-                          {project.live && (
-                            <Button size="sm" variant="outline" asChild className="hover:bg-gradient-to-r hover:from-purple-50 hover:to-pink-50">
-                              <a 
-                                href={project.live} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                              >
-                                <ExternalLink className="h-4 w-4 mr-1" />
-                                Live
-                              </a>
-                            </Button>
-                          )}
-                        </div>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.tags.slice(0, 3).map((tag) => (
+                          <div key={tag} className="badge-smooth">
+                            <Tag className="h-3 w-3 mr-1" />
+                            {tag}
+                          </div>
+                        ))}
+                        {project.tags.length > 3 && (
+                          <div className="badge-smooth">
+                            +{project.tags.length - 3} more
+                          </div>
+                        )}
                       </div>
-                    </CardContent>
-                  </Card>
+                    </div>
+                    <div className="flex gap-2 pt-2">
+                      {project.github && (
+                        <Button size="sm" variant="outline" asChild className="btn-smooth">
+                          <a 
+                            href={project.github} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                          >
+                            <Github className="h-4 w-4 mr-1" />
+                            Code
+                          </a>
+                        </Button>
+                      )}
+                      {project.live && (
+                        <Button size="sm" variant="outline" asChild className="btn-smooth">
+                          <a 
+                            href={project.live} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                          >
+                            <ExternalLink className="h-4 w-4 mr-1" />
+                            Live
+                          </a>
+                        </Button>
+                      )}
+                    </div>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -620,7 +606,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mt-12"
           >
-            <Button asChild size="lg" variant="outline" className="hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-blue-950 dark:hover:to-purple-950">
+            <Button asChild size="lg" variant="outline" className="btn-smooth">
               <Link href="/projects">
                 View All Projects
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -658,46 +644,42 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full bg-gradient-to-br from-white to-blue-50 dark:from-gray-900 dark:to-blue-950">
-                <CardHeader>
-                  <CardTitle className="flex items-center text-2xl">
-                    <Briefcase className="h-6 w-6 mr-3 text-blue-500" />
-                    Experience
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-8">
-                    {experience.map((exp, index) => (
-                      <div key={index} className="border-l-4 border-blue-500 pl-6 pb-6 last:pb-0 relative">
-                        {exp.current && (
-                          <div className="absolute -left-2 top-0 w-4 h-4 bg-blue-500 rounded-full animate-pulse" />
-                        )}
-                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                          <h3 className="font-semibold text-lg">{exp.title}</h3>
-                          <div className="flex items-center text-sm text-muted-foreground">
-                            <Calendar className="h-4 w-4 mr-1" />
-                            {exp.period}
-                          </div>
+              <div className="card-smooth h-full p-6">
+                <div className="flex items-center text-2xl mb-6">
+                  <Briefcase className="h-6 w-6 mr-3 text-blue-500" />
+                  Experience
+                </div>
+                <div className="space-y-8">
+                  {experience.map((exp, index) => (
+                    <div key={index} className="border-l-4 border-blue-500 pl-6 pb-6 last:pb-0 relative">
+                      {exp.current && (
+                        <div className="absolute -left-2 top-0 w-4 h-4 bg-blue-500 rounded-full animate-pulse" />
+                      )}
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                        <h3 className="font-semibold text-lg">{exp.title}</h3>
+                        <div className="flex items-center text-sm text-muted-foreground">
+                          <Calendar className="h-4 w-4 mr-1" />
+                          {exp.period}
                         </div>
-                        <div className="flex items-center text-sm text-muted-foreground mb-3">
-                          <span className="font-medium text-primary">{exp.company}</span>
-                          <span className="mx-2">•</span>
-                          <MapPin className="h-4 w-4 mr-1" />
-                          {exp.location}
-                        </div>
-                        <ul className="space-y-2 text-sm text-muted-foreground">
-                          {exp.description.map((item, i) => (
-                            <li key={i} className="flex items-start">
-                              <span className="text-primary mr-2 mt-1">•</span>
-                              {item}
-                            </li>
-                          ))}
-                        </ul>
                       </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+                      <div className="flex items-center text-sm text-muted-foreground mb-3">
+                        <span className="font-medium text-primary">{exp.company}</span>
+                        <span className="mx-2">•</span>
+                        <MapPin className="h-4 w-4 mr-1" />
+                        {exp.location}
+                      </div>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        {exp.description.map((item, i) => (
+                          <li key={i} className="flex items-start">
+                            <span className="text-primary mr-2 mt-1">•</span>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </motion.div>
 
             {/* Education */}
@@ -707,40 +689,36 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full bg-gradient-to-br from-white to-purple-50 dark:from-gray-900 dark:to-purple-950">
-                <CardHeader>
-                  <CardTitle className="flex items-center text-2xl">
-                    <GraduationCap className="h-6 w-6 mr-3 text-purple-500" />
-                    Education
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-6">
-                    <div className="border-l-4 border-purple-500 pl-6 pb-6 relative">
-                      <div className="absolute -left-2 top-0 w-4 h-4 bg-purple-500 rounded-full animate-pulse" />
-                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                        <h3 className="font-semibold text-lg">B.Tech Computer Science</h3>
-                        <div className="flex items-center text-sm text-muted-foreground">
-                          <Calendar className="h-4 w-4 mr-1" />
-                          2022 - Present
-                        </div>
-                      </div>
-                      <div className="flex items-center text-sm text-muted-foreground mb-2">
-                        <span className="font-medium text-primary">Anurag University</span>
-                        <span className="mx-2">•</span>
-                        <MapPin className="h-4 w-4 mr-1" />
-                        Hyderabad
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white">
-                          CGPA: 9.23
-                        </Badge>
-                        <Badge variant="outline">Current</Badge>
+              <div className="card-smooth h-full p-6">
+                <div className="flex items-center text-2xl mb-6">
+                  <GraduationCap className="h-6 w-6 mr-3 text-purple-500" />
+                  Education
+                </div>
+                <div className="space-y-6">
+                  <div className="border-l-4 border-purple-500 pl-6 pb-6 relative">
+                    <div className="absolute -left-2 top-0 w-4 h-4 bg-purple-500 rounded-full animate-pulse" />
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                      <h3 className="font-semibold text-lg">B.Tech Computer Science</h3>
+                      <div className="flex items-center text-sm text-muted-foreground">
+                        <Calendar className="h-4 w-4 mr-1" />
+                        2022 - Present
                       </div>
                     </div>
+                    <div className="flex items-center text-sm text-muted-foreground mb-2">
+                      <span className="font-medium text-primary">Anurag University</span>
+                      <span className="mx-2">•</span>
+                      <MapPin className="h-4 w-4 mr-1" />
+                      Hyderabad
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="badge-smooth bg-gradient-to-r from-purple-500 to-pink-500 text-white">
+                        CGPA: 9.23
+                      </div>
+                      <div className="badge-smooth">Current</div>
+                    </div>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -774,88 +752,84 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full bg-gradient-to-br from-white to-indigo-50 dark:from-gray-900 dark:to-indigo-950">
-                <CardHeader>
-                  <CardTitle className="flex items-center text-2xl">
-                    <Send className="h-6 w-6 mr-3 text-indigo-500" />
-                    Send me a message
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="name">Name</Label>
-                        <Input
-                          id="name"
-                          placeholder="Your name"
-                          {...register('name')}
-                          className={errors.name ? 'border-destructive' : ''}
-                        />
-                        {errors.name && (
-                          <p className="text-sm text-destructive">{errors.name.message}</p>
-                        )}
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="email">Email</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          placeholder="your.email@example.com"
-                          {...register('email')}
-                          className={errors.email ? 'border-destructive' : ''}
-                        />
-                        {errors.email && (
-                          <p className="text-sm text-destructive">{errors.email.message}</p>
-                        )}
-                      </div>
-                    </div>
-                    
+              <div className="card-smooth h-full p-6">
+                <div className="flex items-center text-2xl mb-6">
+                  <Send className="h-6 w-6 mr-3 text-indigo-500" />
+                  Send me a message
+                </div>
+                <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="subject">Subject</Label>
+                      <Label htmlFor="name">Name</Label>
                       <Input
-                        id="subject"
-                        placeholder="What's this about?"
-                        {...register('subject')}
-                        className={errors.subject ? 'border-destructive' : ''}
+                        id="name"
+                        placeholder="Your name"
+                        {...register('name')}
+                        className={errors.name ? 'border-destructive' : ''}
                       />
-                      {errors.subject && (
-                        <p className="text-sm text-destructive">{errors.subject.message}</p>
+                      {errors.name && (
+                        <p className="text-sm text-destructive">{errors.name.message}</p>
                       )}
                     </div>
-                    
                     <div className="space-y-2">
-                      <Label htmlFor="message">Message</Label>
-                      <Textarea
-                        id="message"
-                        placeholder="Tell me about your project or just say hello!"
-                        rows={6}
-                        {...register('message')}
-                        className={errors.message ? 'border-destructive' : ''}
+                      <Label htmlFor="email">Email</Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="your.email@example.com"
+                        {...register('email')}
+                        className={errors.email ? 'border-destructive' : ''}
                       />
-                      {errors.message && (
-                        <p className="text-sm text-destructive">{errors.message.message}</p>
+                      {errors.email && (
+                        <p className="text-sm text-destructive">{errors.email.message}</p>
                       )}
                     </div>
-                    
-                    <Button 
-                      type="submit" 
-                      className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700" 
-                      disabled={isSubmitting}
-                      size="lg"
-                    >
-                      {isSubmitting ? (
-                        'Sending...'
-                      ) : (
-                        <>
-                          <Send className="h-4 w-4 mr-2" />
-                          Send Message
-                        </>
-                      )}
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="subject">Subject</Label>
+                    <Input
+                      id="subject"
+                      placeholder="What's this about?"
+                      {...register('subject')}
+                      className={errors.subject ? 'border-destructive' : ''}
+                    />
+                    {errors.subject && (
+                      <p className="text-sm text-destructive">{errors.subject.message}</p>
+                    )}
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Message</Label>
+                    <Textarea
+                      id="message"
+                      placeholder="Tell me about your project or just say hello!"
+                      rows={6}
+                      {...register('message')}
+                      className={errors.message ? 'border-destructive' : ''}
+                    />
+                    {errors.message && (
+                      <p className="text-sm text-destructive">{errors.message.message}</p>
+                    )}
+                  </div>
+                  
+                  <Button 
+                    type="submit" 
+                    className="w-full btn-smooth" 
+                    disabled={isSubmitting}
+                    size="lg"
+                  >
+                    {isSubmitting ? (
+                      'Sending...'
+                    ) : (
+                      <>
+                        <Send className="h-4 w-4 mr-2" />
+                        Send Message
+                      </>
+                    )}
+                  </Button>
+                </form>
+              </div>
             </motion.div>
 
             {/* Contact Info */}
@@ -866,22 +840,20 @@ export default function Home() {
               viewport={{ once: true }}
               className="space-y-8"
             >
-              <Card className="bg-gradient-to-br from-white to-purple-50 dark:from-gray-900 dark:to-purple-950">
-                <CardHeader>
-                  <CardTitle className="flex items-center text-2xl">
-                    <User className="h-6 w-6 mr-3 text-purple-500" />
-                    Contact Information
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-6">
+              <div className="card-smooth p-6">
+                <div className="flex items-center text-2xl mb-6">
+                  <User className="h-6 w-6 mr-3 text-purple-500" />
+                  Contact Information
+                </div>
+                <div className="space-y-6">
                   {contactInfo.map((item, index) => (
                     <motion.div 
                       key={index} 
                       className="flex items-center space-x-4 p-3 rounded-lg hover:bg-gradient-to-r hover:from-purple-100 hover:to-pink-100 dark:hover:from-purple-900 dark:hover:to-pink-900 transition-all duration-300"
                       whileHover={{ scale: 1.02, x: 5 }}
                     >
-                      <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-3 rounded-lg">
-                        <item.icon className="h-6 w-6 text-white" />
+                      <div className="icon-container p-3">
+                        <item.icon className="h-6 w-6 text-purple-500" />
                       </div>
                       <div>
                         <h3 className="font-medium">{item.title}</h3>
@@ -896,48 +868,44 @@ export default function Home() {
                       </div>
                     </motion.div>
                   ))}
-                </CardContent>
-              </Card>
+                </div>
+              </div>
 
-              <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950 dark:to-indigo-950 border-blue-200 dark:border-blue-800">
-                <CardHeader>
-                  <CardTitle className="flex items-center text-2xl">
-                    <Coffee className="h-6 w-6 mr-3 text-blue-500" />
-                    Let's grab coffee!
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    I'm always excited to discuss new opportunities, innovative projects, 
-                    or just chat about the latest in tech. Let's connect!
-                  </p>
-                  <div className="flex space-x-3">
-                    {socialLinks.map((social, index) => (
-                      <motion.div
-                        key={index}
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        whileTap={{ scale: 0.9 }}
+              <div className="card-smooth p-6">
+                <div className="flex items-center text-2xl mb-4">
+                  <Coffee className="h-6 w-6 mr-3 text-blue-500" />
+                  Let's grab coffee!
+                </div>
+                <p className="text-sm text-muted-foreground mb-4">
+                  I'm always excited to discuss new opportunities, innovative projects, 
+                  or just chat about the latest in tech. Let's connect!
+                </p>
+                <div className="flex space-x-3">
+                  {socialLinks.map((social, index) => (
+                    <motion.div
+                      key={index}
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      whileTap={{ scale: 0.9 }}
+                    >
+                      <Button
+                        variant="outline"
+                        size="icon"
+                        asChild
+                        className="icon-container"
                       >
-                        <Button
-                          variant="outline"
-                          size="icon"
-                          asChild
-                          className="hover:bg-gradient-to-r hover:from-blue-100 hover:to-indigo-100 dark:hover:from-blue-900 dark:hover:to-indigo-900"
+                        <a
+                          href={social.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={social.name}
                         >
-                          <a
-                            href={social.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={social.name}
-                          >
-                            <social.icon className="h-5 w-5" />
-                          </a>
-                        </Button>
-                      </motion.div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+                          <social.icon className="h-5 w-5" />
+                        </a>
+                      </Button>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -952,7 +920,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <Card className="p-8 md:p-12 text-center bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 text-white border-none overflow-hidden relative">
+            <div className="p-8 md:p-12 text-center bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 text-white border-none overflow-hidden relative rounded-3xl">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm" />
               <div className="relative z-10">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -965,12 +933,12 @@ export default function Home() {
                   <Button 
                     size="lg" 
                     onClick={() => scrollToSection('contact')}
-                    className="text-lg px-8 py-6 bg-white text-blue-600 hover:bg-gray-100"
+                    className="text-lg px-8 py-6 bg-white text-blue-600 hover:bg-gray-100 rounded-2xl"
                   >
                     Start a Project
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
-                  <Button variant="outline" size="lg" asChild className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-blue-600">
+                  <Button variant="outline" size="lg" asChild className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-blue-600 rounded-2xl">
                     <a href="/resume.pdf" download>
                       <Download className="mr-2 h-5 w-5" />
                       Download Resume
@@ -978,7 +946,7 @@ export default function Home() {
                   </Button>
                 </div>
               </div>
-            </Card>
+            </div>
           </motion.div>
         </div>
       </section>
