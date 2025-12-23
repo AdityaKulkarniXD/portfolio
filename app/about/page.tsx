@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import {
   Briefcase,
   GraduationCap,
@@ -18,6 +19,17 @@ export default function AboutPage() {
     <div className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 min-h-screen">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
+          <div className="mb-8 flex justify-center">
+            <div className="relative w-48 h-48 rounded-full overflow-hidden ring-4 ring-primary/20 shadow-2xl">
+              <Image
+                src="/profile.jpg"
+                alt="Aditya Kulkarni"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-gradient">About Me</span>
           </h1>
