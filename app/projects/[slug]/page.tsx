@@ -30,7 +30,7 @@ export async function generateMetadata({
   };
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
+export default async function ProjectPage({ params }: { params: { slug: string } }) {
   const project = getProjectBySlug(params.slug);
 
   if (!project) {
@@ -46,7 +46,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           href="/projects"
           className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8 group"
         >
-          <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+          <ArrowLeft className="w-4 group-hover:-translate-x-1 transition-transform" />
           Back to Projects
         </Link>
 
@@ -109,7 +109,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </header>
 
           <div className="glass rounded-xl p-8 md:p-12">
-            <MarkdownRenderer content={content} />
+            {await MarkdownRenderer({ content })}
           </div>
         </article>
 
